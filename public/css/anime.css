@@ -1,0 +1,67 @@
+/* Sternebewertung */
+span#Bewertung label {
+    line-height: 45px;
+    cursor: Pointer;
+   }
+   
+   span#Bewertung input[type="radio"] {
+    /*display: None;*/ 
+   }
+   
+   p.sternebewertung {
+    float: Left;
+   }
+   
+   p.sternebewertung:not(:checked) > input {
+    display: None;
+   }
+   
+   p.sternebewertung:not(:checked) > label {
+    float: Right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: Hidden;
+    white-space: Nowrap;
+    cursor: Pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #D0D0D0;
+    text-shadow: 1px 1px #B0B0B0, 2px 2px #606060, .1em .1em .2em rgba(0,0,0,.5);
+    transition: all .5s;
+   }
+   
+   p.sternebewertung:not(:checked) > label::before {
+    content: '★ ';
+   }
+   
+   p.sternebewertung > input:checked ~ label {
+    color: #FFD700;
+    text-shadow: 1px 1px #C06000, 2px 2px #904000, .1em .1em .2em rgba(0,0,0,.5);
+    filter: drop-shadow(0px 0px 3px #FFD700);
+    animation: twinkle 1s ease-in-out infinite alternate;
+   }
+   
+   p.sternebewertung:not(:checked) > label:hover,
+   p.sternebewertung:not(:checked) > label:hover ~ label {
+    color: #FECF41;
+    text-shadow: 1px 1px #F29E02, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    filter: drop-shadow(0px 0px 2px #FFD700);
+   }
+   
+   p.sternebewertung > input:checked + label:hover,
+   p.sternebewertung > input:checked + label:hover ~ label,
+   p.sternebewertung > input:checked ~ label:hover,
+   p.sternebewertung > input:checked ~ label:hover ~ label,
+   p.sternebewertung > label:hover ~ input:checked ~ label {
+    color: #FBB600;
+    text-shadow: 1px 1px #F8BA01, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+    filter: drop-shadow(0px 0px 2px #FFD700);
+   }
+   
+   @keyframes twinkle {
+    to {
+     text-shadow: 1px 1px #FFE653, 2px 2px #FFF5BF, .1em .1em .2em rgba(0,0,0,.5);
+     filter: drop-shadow(0px 0px 5px #FFD700);
+     transform: rotate(10deg);
+    }
+   } 

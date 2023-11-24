@@ -1,0 +1,74 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.homesec {
+    font-size: 14px;
+    background-color: #0f0f0f;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    padding: 110px /*Oben&unten*/ 165px; /*Links & Rechts*/
+}
+
+.sticky-sec 
+{
+    margin-top: 65px;
+}
+
+.homesec h1 {
+    margin: 0;
+    text-align: left;
+    margin-left: 30%;
+    line-height: 60px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.homesec p {
+    margin : 0;
+    text-align: left;
+    margin-left: 30%;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.button-discord {
+    background-color: #5a2e98;
+    border-style: solid;
+    margin-left: 30%;
+    padding-right: 1.9em; 
+    padding-left: 1.9em;  
+    padding-top: 0.7em; 
+    padding-bottom: 0.7em; 
+    color: white;
+    border-radius: 7px;
+    font-size: 1.1em;
+    font-weight: 550;
+    transition: background-color 0.45s;
+    border: none;
+}
+
+.button-discord a {
+    text-decoration: none;
+    color: white;
+}
+
+.button-discord:hover {
+    background-color: #7243b4;
+}
+
+.span-anidash {
+    background-color: #5a2e985b;
+}
+
+.websitepreview-bild {
+    width: 54%;
+    border-radius: 10px;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

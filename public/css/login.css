@@ -1,0 +1,116 @@
+body {
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    margin: 0; 
+}
+
+::selection {
+    background-color: #5a2e98; 
+    color: white; 
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h3 {
+    margin-top: 5%;
+    color: #fff;
+    font-size: 28px;
+}
+
+.box input[type="text"],
+.box input[type="email"],
+.box input[type="password"] {
+    height: 35px;
+    width: 70%;
+    background: #222222;
+    color: #a1a1a1f5;
+    text-indent: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.box input[type="text"]::placeholder,
+.box input[type="email"]::placeholder,
+.box input[type="password"]::placeholder {
+    color: #a1a1a1f5;
+    text-indent: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    color: #a1a1a1f5;
+    text-indent: 5px;
+}
+
+input[type="submit"],
+input[type="button"] {
+    height: 34px;
+    width: 28%;
+    background: #222222;
+    color: #a1a1a1f5;
+    text-align: center;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    color: white;
+}
+
+.box {
+    position: relative;
+    height: 440px;
+    width: 390px;
+    background: #141414;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.password-toggle-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 42.5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password-toggle i {
+    margin-right: 18px;
+    color: #0f0f0f;
+}
+
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #292A2D;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    animation: slideInOut 3s linear;
+}
+
+.login-img {
+    margin-top: 18%;
+    width: 56%;
+}

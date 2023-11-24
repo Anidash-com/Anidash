@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIDASH || ADMIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+    
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Admin Panel</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/admin">Startseite</a>
+        <a class="mdl-navigation__link" href="/admin/addanime">Add Animes</a>
+        <a class="mdl-navigation__link" href="/admin/animes">Animes</a>
+        <a class="mdl-navigation__link" href="/admin/users">Useres</a>
+        <a class="mdl-navigation__link" href="/" style="background-color: red; color: black;">Logout</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+
+<center>
+        <div class="container" style="color: white">
+            <div class="row">
+                <% for (let i = 0; i < animes.length; i++) { %>
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="border: 1px solid white;">
+                            <img src="<%= animes[i].image %>" class="card-img-top" alt="Anime Image">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= animes[i].name %></h5>
+                                <p class="card-text">Description: <%= animes[i].description %></p>
+                                <p class="card-text">Keywords: <%= animes[i].keywords %></p>
+                                
+                                <form action="deleteanime?<%= animes[i].id %>" method="POST">
+                                    <input type="submit" value="Delete" style="background-color: rgb(255, 28, 28); color: black;" onclick="console.log('Der Anime wurde erfolgreich gelöscht!')">
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+    </center>
+
+      </div>
+    </main>
+  </div>
+
+
+
+</body>
+</html>

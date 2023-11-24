@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIDASH || LOGIN</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+    <center>
+        <form action="/login" method="POST">
+            <div class="box">
+                <a href="/"><img class="login-img" src="/images/logo.png"></a>
+                <h3>Login - Anidash</h3>
+                <input type="text" name="username" placeholder="username" required> <br>
+                <div class="password-toggle-container">
+                    <input type="password" id="password" name="password" placeholder="password" required> <br>
+                    <div class="password-toggle" onclick="showPassword()"><i class="fas fa-eye"></i></div>
+                </div>
+                <input type="submit" value="Login">
+                <input type="button" value="Register" onclick="navigateTo('/register')">
+            </div>
+        </form>
+        <div id="notification" class="notification" style="display: none;"><%= notification %></div>
+
+        
+    </center>
+
+<script>
+
+function navigateTo(url) {
+    window.location.href = url;
+}
+
+function showPassword() {
+    var passwordField = document.getElementById("password");
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+}
+
+var notification = document.getElementById("notification");
+notification.innerHTML = "<%= notification %>";
+
+if (performance.navigation.type === 1) {
+    notification.innerHTML = '';
+}
+if (notification.innerHTML.trim() !== "") {
+
+    notification.style.display = "block";
+
+    setTimeout(function () {
+        notification.style.display = "none";
+    }, 3000);
+}
+
+</script>
+
+</body>
+</html>

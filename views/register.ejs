@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIDASH || REGUSTER</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+    <center>
+        <form action="/register" method="POST">
+            <div class="box">
+                <a href="/"><img class="login-img" src="/images/logo.png"></a>
+                <h3>Register - Anidash</h3>
+                <input type="text" name="username" placeholder="username" required> <br>
+                <input type="email" name="email" placeholder="email" required> <br>
+                <div class="password-toggle-container">
+                    <input type="password" id="password" name="password" placeholder="password" required> <br>
+                    <div class="password-toggle" onclick="showPassword()"><i class="fas fa-eye"></i></div>
+                </div>
+                <input type="submit" value="Register">
+                <input type="button" value="Login" onclick="navigateTo('/login')">
+            </div>
+        </form>
+    </center>
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+
+        function showPassword() {
+            var passwordField = document.getElementById("password");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

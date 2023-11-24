@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIDASH || ADMIN</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+    
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Admin Panel</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/admin">Startseite</a>
+        <a class="mdl-navigation__link" href="/admin/addanime">Add Animes</a>
+        <a class="mdl-navigation__link" href="/admin/animes">Animes</a>
+        <a class="mdl-navigation__link" href="/admin/users">Useres</a>
+        <a class="mdl-navigation__link" href="/" style="background-color: red; color: black;">Logout</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+
+
+        <center>
+            <form action="/admin/addanime" method="POST">
+                <div class="box">
+                    <h3>Add Animes</h3>
+                    <input type="text" name="name" placeholder="Name" required> <br>
+                    <input type="text" name="keywords" placeholder="Keywords" required> <br>
+                    <input type="text" name="image" placeholder="Image" required> <br>
+                    <input type="text" name="description" placeholder="Description" required> <br>
+                    <input type="submit" value="Add" id="addbtn">
+                </div>
+            </form>
+        </center>
+
+      </div>
+    </main>
+  </div>
+
+
+  <script>
+
+    const Addbtn = document.getElementById('addbtn');
+    const name = document.getElementsByName('name').value;
+    const keywords = document.getElementsByName('keywords').value;
+    const image = document.getElementsByName('image').value;
+    const description = document.getElementsByName('description').value;
+
+    Addbtn.addEventListener('click', () => {
+      alert("Animes Aktualisiert!")
+    });
+
+  </script>
+
+</body>
+</html>

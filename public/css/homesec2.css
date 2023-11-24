@@ -1,0 +1,16 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.homesec2 {
+    font-size: 14px;
+    background-color: #131313; /* #131212 */
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    padding: 270px;
+}
+
+.homesec2 p {
+    margin : 0;
+}

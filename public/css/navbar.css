@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif; 
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main-content {
+    margin-top: 80px; 
+}
+
+.navbar {
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1D1C; 
+    padding: 12px; 
+    color: #a1a1a1f5;
+    box-shadow: 1px 2px 10px #101110;
+    height: 65px;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.Logoicon {
+    width: 135px;
+}
+
+.nav-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #a1a1a1f5;
+    text-align: center;
+    transition: color 0.45s;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links i {
+    color: red;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    background-color: #5a2e98; 
+    color: white;
+    border: none;
+    padding: 4px 10px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.2s, color 0.2s;
+    margin-right: 15px;
+    transition: background-color 0.45s;
+}
+
+.login-button:hover {
+    background-color: #7243b4;
+}
+
+.login-button span {
+    margin-left: 5px; 
+}
+
+.span-loginpfeil {
+    font-size: 19px;
+}
+
+.language-dropdown {
+    position: relative;
+    margin-left: 15px; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    border-radius: 5px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #a1a1a1f5;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #262626;
+}
+
+.fa {
+    color: red;
+}

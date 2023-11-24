@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xA1QHRBmVbFzjkj5FsbBfCR04tNUiPKPaa8t1Q9Vqbygg3+7QO8JlKzF2xlMyEag+CUU4z/fxJcc7db6J6ccfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inder&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/homesec2.css">
+    <link rel="stylesheet" href="/css/homesec.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>ANIDASH | DASHBOARD</title>
+    <script src="https://kit.fontawesome.com/b347315fce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id='navbar' class="navbar">
+        <img class="Logoicon" src="/images/logo.png ">
+
+        <div class="nav-links">
+            <a href="/"><i class="fas fa-home"></i>Home</a>
+            <a href="./anime.ejs">Animes</a>
+            <a href="https://discord.gg/zHHT69khuD">Discord</a>
+        </div>
+
+        <div class="user-actions">
+            <% if (isLoggedIn) { %>
+                <button style="background-color: #5a2e98;" class="login-button" onclick="window.location.href='/profile'"><%= username %></button>
+            <% } else { %>
+                <button class="login-button" onclick="window.location.href='/login'">Login <span class="span-loginpfeil">&#10140;</span></button>
+            <% } %>
+            <div class="language-dropdown">
+                <span>Sprache</span>
+                <div class="dropdown-content">
+                    <a href="#">English</a>
+                    <a href="#">Deutsch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="homesec">
+        <div class="home-container">
+            <img class="websitepreview-bild" src="/images/cool.png">
+            <div>
+                <h1>
+                    Herzlich <br>willkommen <br>auf <span class="span-anidash">Anidash</span>!
+                </h1>
+    
+                <p>
+                    Herzlich willkommen auf Anidash! Hier kannst du nicht nur spannende Animes entdecken und bewerten, sondern auch in lebendigen Diskussionen mit anderen Fans eintauchen. Tauche ein in die faszinierende Welt der Animation, teile deine Leidenschaft und erfahre wichtige Infos zu deinen Lieblingswerken. <br>Anidash ist mehr als nur eine Website – es ist eine lebendige Community, <br>in der Anime-Liebhaber zusammenkommen. <br>Wir laden dich ein, die bunte Vielfalt der Animes mit uns zu erkunden und Teil dieser einzigartigen Gemeinschaft zu werden!
+                </p>
+
+                <!--<i class="fa fa-phone-square" aria-hidden="true"></i>---><button class="button-discord"><a href="https://discord.gg/zHHT69khuD">JOINE AUF UNSEREN DISCORD</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="homesec2">
+        <p>
+            Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful contentLorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content
+        </p>
+    </section>
+</body>
+
+<script>
+    const navbar = document.querySelector(".navbar");
+    const homesec = document.querySelector(".homesec");
+
+    var offSticky = navbar.offsetTop;
+
+    window.onscroll = function() { sticky() };
+
+    function sticky() 
+    {
+        if (window.pageYOffset > offSticky) {
+            navbar.classList.add("sticky")
+            homesec.classList.add("sticky-sec")
+        } else if(window.pageYOffset <= 0){
+            navbar.classList.remove("sticky");
+            homesec.classList.remove("sticky-sec")
+        }
+    } 
+</script>
+
+</html>

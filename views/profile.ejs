@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <div class="box">
+        <center>
+            <a href="/"><img class="profile-img" src="/images/logo.png"></a>
+            <h3>Profile - Anidash</h3>
+            
+            <div class="profile-infos">
+                <div class="first-row">
+                    <p><span class="span-username2">Benutzername</span> <br><span class="span-username"><%= user.username %></span></p>
+                    <p class="userRole"><span class="span-role2">Rolle</span> <br><span class="span-role"><%= user.role %></span></p>
+                    <p><span class="span-email2">Email</span> <br><span class="span-email"><%= user.email %></span></p> 
+                </div>
+
+                <div class="second-row">
+                    <form action="/addprofilepicture" method="POST" enctype="multipart/form-data">
+                        <label for="fileUpload">Profilbild hinzufügen</label>
+                        <input type="file" accept=".jpg,.png,.jpeg" name="image" id="fileUpload">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <div class="third-row">
+                    <form action="/changepassword" method="POST">
+                        <input type="submit" value="Passwort ändern">
+                    </form>
+                    
+                    <input type="button" onclick="navigateTo('/logout')" value="Ausloggen">
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <img src="images/userimgs/<%= filename %>.jpg" alt="" height="40px" style="border-radius: 20px;">
+
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+
+
+        const userRole = '<%= user.role %>';
+        const userRoleElement = document.getElementById('userRole');
+
+        if (userRole === 'admin') {
+            userRoleElement.innerHTML += '<span class="roleBadge" style="background-color: red;"></span>';
+        } else if (userRole === 'user') {
+            userRoleElement.innerHTML += '<span class="roleBadge" style="background-color: green;"></span>';
+        }
+    </script>
+</body>
+</html>

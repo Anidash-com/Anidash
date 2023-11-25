@@ -8,7 +8,7 @@ body::-webkit-scrollbar {
     color: white;
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
-    padding: 110px /*Oben&unten*/ 165px; /*Links & Rechts*/
+    padding: 100px /*Oben&unten*/ 160px; /*Links & Rechts*/
 }
 
 .sticky-sec 
@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
 }
 
 .button-discord {
-    background-color: #5a2e98;
+    background-color: #1A7E00;
     border-style: solid;
     margin-left: 30%;
     padding-right: 1.9em; 

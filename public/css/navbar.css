@@ -47,7 +47,13 @@ body::-webkit-scrollbar {
 }
 
 .nav-links i {
-    color: red;
+    padding-right: 8px;
+    color: #5a2e98;
+    transition: color 0.45s;
+}
+
+.nav-links i:hover {
+    color: white;
 }
 
 .user-actions {

@@ -9,7 +9,7 @@ body {
 }
 
 ::selection {
-    background-color: #5a2e98; 
+    background-color: #1A7E00; 
     color: white; 
 }
 
@@ -50,17 +50,17 @@ h3 {
 
 .span-role {
     font-size: 16px;
-    background-color: #5a2e985b;
+    background-color: #1A7E005b;
 }
 
 .span-username {
     font-size: 16px;
-    background-color: #5a2e985b; 
+    background-color: #1A7E005b; 
 }
 
 .span-email {
     font-size: 16px;
-    background-color: #5a2e985b;
+    background-color: #1A7E005b;
 }
 
 .span-role2, 
@@ -83,7 +83,7 @@ h3 {
     font-weight: bold;
     display: inline-block;
     padding: 4px 10px; 
-    background-color: #5a2e98;
+    background-color: #1A7E00;
     color: #fff;
     cursor: pointer;
     border-radius: 10px;
@@ -100,7 +100,7 @@ h3 {
     padding-right: 10px;
     padding-bottom: 8px;
     padding-top: 8px;
-    background-color: #5a2e98;
+    background-color: #1A7E00;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -124,7 +124,7 @@ input[type="button"] {
     padding-top: 8px;
     padding-left: 10px;
     padding-right: 10px;
-    background: #5a2e98;
+    background: #1A7E00;
     color: white;
     text-align: center;
     margin: 5px;

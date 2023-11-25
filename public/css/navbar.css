@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
 
 .nav-links i {
     padding-right: 8px;
-    color: #5a2e98;
+    color: #145B01;
     transition: color 0.45s;
 }
 
@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
 }
 
 .login-button {
-    background-color: #5a2e98; 
+    background-color: #145B01; 
     color: white;
     border: none;
     padding: 4px 10px; 

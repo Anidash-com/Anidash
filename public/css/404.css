@@ -1,5 +1,5 @@
 ::selection {
-    background-color: #5a2e98; 
+    background-color: #145B01; 
     color: white; 
 }
 
@@ -34,7 +34,7 @@ p {
 }
 
 a {
-    color: #5a2e98;
+    color: #145B01;
     text-decoration: none;
     transition: color 0.15s;
 }

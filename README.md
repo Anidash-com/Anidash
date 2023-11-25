@@ -9,4 +9,4 @@ passion and find out important information about your favorite works.
 
 ## Authors
 
-- [@Quoboo](https://github.com/qoboo)
+- [@Quoboo](https://github.com/quoboo)

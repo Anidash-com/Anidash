@@ -1,4 +1,4 @@
-# Anidash
+# Anidash 🌸
 
 Welcome to Anidash! Here you can not only discover and rate exciting 
 anime, but also immerse yourself in lively discussions with other fans. 

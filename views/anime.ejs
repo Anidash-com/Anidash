@@ -4,61 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANIME || <%= anime.name %></title>
-    <link rel="stylesheet" href="../css/anime.css">
+    <link rel="stylesheet" href="/css/anime.css">
 </head>
 <body>
+    <section class="animesec">
+        <div class="container-animebox">
+            <h1><%= anime.name %></h1>
+            <h5><%= anime.description %></h5>
+            <h5><%= anime.keywords %></h5>
+            <img src="<%= anime.image %>" alt="Anime hat kein Bild">
+
+            <h1 style="color: red;">Kommentare</h1>
 
 
-    <h1><%= anime.name %></h1>
-    <h5><%= anime.description %></h5>
-    <h5><%= anime.keywords %></h5>
-    <img src="<%= anime.image %>" alt="Anime hat kein Bild">
-
-    <h1 style="color: red;">Kommentare</h1>
-
-
-    <% if (isLoggedIn) { %>
-        <form action="/sendrating?<%= anime.id %>" method="POST">
-            <p class="sternebewertung">
-                <input type="radio" id="stern5" name="star1" value="5"><label for="stern5" title="5 Sterne">5 Sterne</label>
-                <input type="radio" id="stern4" name="star2" value="4"><label for="stern4" title="4 Sterne">4 Sterne</label>
-                <input type="radio" id="stern3" name="star3" value="3"><label for="stern3" title="3 Sterne">3 Sterne</label>
-                <input type="radio" id="stern2" name="star4" value="2"><label for="stern2" title="2 Sterne">2 Sterne</label>
-                <input type="radio" id="stern1" name="star5" value="1"><label for="stern1" title="1 Stern">1 Stern</label>
-                <span id="Bewertung" title="Keine Bewertung">
-                </span>
-               </p> 
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-            <textarea name="text" id="" cols="80" rows="10"></textarea> <br>
-            <input type="submit" value="Send Comment">
-        </form>
-
-    <% } else { %>
-        <p>Logge dich ein um Kommentare zu schreiben</p>
-    <% } %>
-
-    <% for (let i = 0; i < comments.length; i++) { %>
-    <div>
-        <div style="background-color: grey;">
-            <h4>Username: <%= comments[i].username %></h4>
-            <h4>Points/Stars: <%= comments[i].points %></h4>
-            <h3>Kommentar: <%= comments[i].comment %></h3>
-        <% if (userrole == "admin" || comments[i].user_id == userid) { %>
-            <form action="/deleterating?<%= comments[i].rating_id %>" method="POST">
-                <input type="submit" value="Delte Comment">
-            </form>
-            <% } %>
+            <% if (isLoggedIn) { %>
+                <form action="/sendrating?<%= anime.id %>" method="POST">
+                    <p class="sternebewertung">
+                        <input type="radio" id="stern5" name="star1" value="5"><label for="stern5" title="5 Sterne">5 Sterne</label>
+                        <input type="radio" id="stern4" name="star2" value="4"><label for="stern4" title="4 Sterne">4 Sterne</label>
+                        <input type="radio" id="stern3" name="star3" value="3"><label for="stern3" title="3 Sterne">3 Sterne</label>
+                        <input type="radio" id="stern2" name="star4" value="2"><label for="stern2" title="2 Sterne">2 Sterne</label>
+                        <input type="radio" id="stern1" name="star5" value="1"><label for="stern1" title="1 Stern">1 Stern</label>
+                        <span id="Bewertung" title="Keine Bewertung">
+                        </span>
+                    </p> 
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                    <textarea name="text" id="" cols="80" rows="10"></textarea> <br>
+                    <input type="submit" value="Send Comment">
+                </form>
         </div>
-    </div>
 
-    <% } %>
+        <% } else { %>
+            <p>Logge dich ein um Kommentare zu schreiben</p>
+        <% } %>
 
-    
+        <% for (let i = 0; i < comments.length; i++) { %>
+        <div>
+            <div style="background-color: rgb(255, 0, 0);">
+                <h4>Username: <%= comments[i].username %></h4>
+                <h4>Points/Stars: <%= comments[i].points %></h4>
+                <h3>Kommentar: <%= comments[i].comment %></h3>
+            <% if (userrole == "admin" || comments[i].user_id == userid) { %>
+                <form action="/deleterating?<%= comments[i].rating_id %>" method="POST">
+                    <input type="submit" value="Delte Comment">
+                </form>
+                <% } %>
+            </div>
+        </div>
+
+        <% } %>
+    </section>
 </body>
 </html>

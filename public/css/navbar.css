@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
 
 .nav-links i {
     padding-right: 8px;
-    color: #145B01;
+    color: #5A2E98;
     transition: color 0.45s;
 }
 
@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
 }
 
 .login-button {
-    background-color: #145B01; 
+    background-color: #5A2E98; 
     color: white;
     border: none;
     padding: 4px 10px; 
@@ -110,8 +110,4 @@ body::-webkit-scrollbar {
 .language-dropdown:hover .dropdown-content {
     display: block;
     background-color: #262626;
-}
-
-.fa {
-    color: red;
 }

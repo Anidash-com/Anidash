@@ -8,3 +8,4 @@ passion and find out important information about your favorite works. 🌸
 ## Authors
 
 - [@Quoboo](https://github.com/quoboo)
+- [@oglis22](https://github.com/oglis22) (Left Project)

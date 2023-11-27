@@ -1,5 +1,3 @@
-# Anidash 🌸
-
 ![Alt-Text](https://i.imgur.com/xJZRzZu.png)
 
 Welcome to Anidash! Here you can not only discover and rate exciting 
